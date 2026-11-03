@@ -198,6 +198,19 @@
   ],
   "featuredProjects": [
     {
+      "name": "Library Management System",
+      "description": "A library website: members request books online and librarians run the desk, with due-date notifications. Spring Boot 3 and React, session login with CSRF protection, an independent security review and 124 tests written test-first. The demo may take a minute to wake up.",
+      "url": "https://github.com/92hell/library-management-dashboard",
+      "demoUrl": "https://helmi-library-demo.onrender.com",
+      "tags": [
+        "Spring Boot",
+        "React",
+        "Spring Security",
+        "Flyway",
+        "TDD"
+      ]
+    },
+    {
       "name": "ATM Bersama QRIS Certification Platform",
       "description": "UAT automation and certification platform with a sandbox host simulator: ISO 8583 TCP server, JWT + HMAC-secured REST API, JSON↔ISO 8583 conversion and auto-generated UAT reports. Main engineer; 766 JUnit tests.",
       "url": "",

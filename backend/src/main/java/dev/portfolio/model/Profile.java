@@ -34,5 +34,9 @@ public record Profile(
 
     public record Education(String school, String degree, String start, String end) {}
 
-    public record FeaturedProject(String name, String description, String url, List<String> tags) {}
+    /**
+     * @param url     where the code lives (or the project page); empty for private client work
+     * @param demoUrl a live demo, if there is one
+     */
+    public record FeaturedProject(String name, String description, String url, String demoUrl, List<String> tags) {}
 }
