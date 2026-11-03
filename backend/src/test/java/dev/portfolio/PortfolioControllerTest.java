@@ -22,7 +22,11 @@ class PortfolioControllerTest {
         mvc.perform(get("/api/profile"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name").isNotEmpty())
-                .andExpect(jsonPath("$.skills").isArray());
+                .andExpect(jsonPath("$.skills").isArray())
+                // Highlights are short qualitative statements (title + sentence), not numeric claims.
+                .andExpect(jsonPath("$.highlights[0].title").isNotEmpty())
+                .andExpect(jsonPath("$.highlights[0].text").isNotEmpty())
+                .andExpect(jsonPath("$.highlights[0].value").doesNotExist());
     }
 
     @Test

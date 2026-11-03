@@ -56,20 +56,23 @@ function Sidebar({ profile, hasCv, githubUrl }) {
 function Overview({ profile }) {
   return (
     <>
-      <section className="stats">
-        {profile.highlights?.map((s) => (
-          <div className="card stat" key={s.label}>
-            <div className="stat-value">{s.value}</div>
-            <div className="muted">{s.label}</div>
-          </div>
-        ))}
-      </section>
-      <section className="card">
-        <h2>About</h2>
+      <section className="card intro">
         <p>{profile.summary}</p>
       </section>
+      <section>
+        <h2 className="section-title">What I focus on</h2>
+        <div className="focus-grid">
+          {profile.highlights?.map((h) => (
+            <div className="card focus" key={h.title}>
+              <span className="focus-icon" aria-hidden="true">{h.icon}</span>
+              <h3>{h.title}</h3>
+              <p className="muted">{h.text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
       <section className="card">
-        <h2>Skills</h2>
+        <h2>What I work with</h2>
         <div className="skills">
           {profile.skills?.map((g) => (
             <div key={g.category}>
@@ -88,7 +91,7 @@ function Projects({ profile, repos }) {
     <>
       {profile.featuredProjects?.length > 0 && (
         <section>
-          <h2 className="section-title">Featured</h2>
+          <h2 className="section-title">Things I've built</h2>
           <div className="grid">
             {profile.featuredProjects.map((p) => {
               const body = (
@@ -107,7 +110,7 @@ function Projects({ profile, repos }) {
       )}
       <section>
         <h2 className="section-title">
-          From GitHub
+          On GitHub
           {repos.data?.profileUrl && (
             <a className="small-link" href={repos.data.profileUrl} target="_blank" rel="noreferrer">view all →</a>
           )}
@@ -142,7 +145,7 @@ function Experience({ profile }) {
   return (
     <>
       <section className="card">
-        <h2>Experience</h2>
+        <h2>Where I've worked</h2>
         <ol className="timeline">
           {profile.experience?.map((e) => (
             <li key={`${e.company}-${e.start}`}>

@@ -2,7 +2,7 @@ package dev.portfolio.model;
 
 import java.util.List;
 
-/** Everything shown on the dashboard that is not pulled from GitLab. Edit portfolio.json to change it. */
+/** Everything shown on the dashboard that is not pulled from GitHub. Edit portfolio.json to change it. */
 public record Profile(
         String name,
         String title,
@@ -10,7 +10,7 @@ public record Profile(
         String summary,
         String avatarUrl,
         List<Link> links,
-        List<Stat> highlights,
+        List<Highlight> highlights,
         List<SkillGroup> skills,
         List<Experience> experience,
         List<Education> education,
@@ -18,7 +18,8 @@ public record Profile(
 
     public record Link(String label, String url) {}
 
-    public record Stat(String label, String value) {}
+    /** A short, qualitative "what I do" card: an emoji, a title and one sentence. */
+    public record Highlight(String icon, String title, String text) {}
 
     public record SkillGroup(String category, List<String> items) {}
 

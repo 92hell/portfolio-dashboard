@@ -1,29 +1,137 @@
 {
   "name": "Helmi Fakhriandi Rachman",
-  "title": "Software Engineer · Payments & Backend",
+  "title": "Backend engineer · payments & integrations",
   "location": "Jakarta, Indonesia",
-  "summary": "Software Engineer with 6+ years of backend experience in payments. Since 2020 I have been a vendor developer for Artajasa, operator of the ATM Bersama network in Indonesia, building ISO 8583 and QRIS systems in Java and Spring Boot. I designed and built a QRIS certification platform as the main engineer, and now build Oracle Fusion ERP integration in Node.js for a telecom client. Strong in TDD, SQL tuning and AI-assisted development.",
+  "summary": "Hi, I'm Helmi 👋 I've spent the last six years building payment systems for Indonesia's ATM Bersama network: ISO 8583 switching, QRIS, and the tooling that helps banks get certified. These days I'm also connecting a telecom client's project system to Oracle Fusion ERP. I like writing the test first, making slow reports fast, and handing over code the next person enjoys working on.",
   "avatarUrl": "/avatar.jpg",
   "links": [
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/helmi-fakhriandi-rachman" },
-    { "label": "Email", "url": "mailto:helmi.fakhriandi@gmail.com" }
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/helmi-fakhriandi-rachman"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:helmi.fakhriandi@gmail.com"
+    }
   ],
   "highlights": [
-    { "label": "Years in payments backend", "value": "6+" },
-    { "label": "JUnit tests on the QRIS platform", "value": "766" },
-    { "label": "Commits in 7 weeks (ERP integration)", "value": "400+" },
-    { "label": "Report load time (was 15–30 min)", "value": "< 5 min" }
+    {
+      "icon": "💳",
+      "title": "Payments, end to end",
+      "text": "ISO 8583 switching, QRIS and payment gateways for the ATM Bersama network since 2020."
+    },
+    {
+      "icon": "🔗",
+      "title": "Integrations",
+      "text": "Currently connecting a project management system to Oracle Fusion ERP."
+    },
+    {
+      "icon": "🧪",
+      "title": "Test-first",
+      "text": "I write the test before the code, with JUnit and Jest."
+    },
+    {
+      "icon": "🤝",
+      "title": "Mentoring",
+      "text": "Handed my QRIS platform to two developers and now review their code."
+    }
   ],
   "skills": [
-    { "category": "Payments", "items": ["ISO 8583", "QRIS", "Payment Switching", "Payment Gateway", "TCP/IP Socket", "jPOS", "Host Simulator", "UAT & Certification Testing"] },
-    { "category": "Languages", "items": ["Java 17", "JavaScript", "SQL", "PHP"] },
-    { "category": "Frameworks", "items": ["Spring Boot", "Spring Security", "Spring Data JPA", "Thymeleaf", "Node.js", "Express.js", "Knex.js", "React", "Ant Design", "Yii 1.1", "Laravel"] },
-    { "category": "APIs & Integration", "items": ["Microservices", "RESTful API", "JWT", "HMAC Signing", "SOAP", "Oracle Fusion ERP Integration"] },
-    { "category": "Databases", "items": ["PostgreSQL", "MySQL", "Oracle", "Redis (basic)", "SQL Query Tuning"] },
-    { "category": "Testing & Tools", "items": ["JUnit", "Jest", "TDD", "Postman", "Git", "Claude Code", "Graphify", "Obsidian"] },
-    { "category": "Security", "items": ["OWASP Top 10", "Penetration Test Remediation"] },
-    { "category": "Currently Learning", "items": ["Go", "GCP", "Docker", "CI/CD"] },
-    { "category": "Spoken Languages", "items": ["Indonesian (Native)", "English (Professional)"] }
+    {
+      "category": "Payments",
+      "items": [
+        "ISO 8583",
+        "QRIS",
+        "Payment Switching",
+        "Payment Gateway",
+        "TCP/IP Socket",
+        "jPOS",
+        "Host Simulator",
+        "UAT & Certification Testing"
+      ]
+    },
+    {
+      "category": "Languages",
+      "items": [
+        "Java 17",
+        "JavaScript",
+        "SQL",
+        "PHP"
+      ]
+    },
+    {
+      "category": "Frameworks",
+      "items": [
+        "Spring Boot",
+        "Spring Security",
+        "Spring Data JPA",
+        "Thymeleaf",
+        "Node.js",
+        "Express.js",
+        "Knex.js",
+        "React",
+        "Ant Design",
+        "Yii 1.1",
+        "Laravel"
+      ]
+    },
+    {
+      "category": "APIs & Integration",
+      "items": [
+        "Microservices",
+        "RESTful API",
+        "JWT",
+        "HMAC Signing",
+        "SOAP",
+        "Oracle Fusion ERP Integration"
+      ]
+    },
+    {
+      "category": "Databases",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "Oracle",
+        "Redis (basic)",
+        "SQL Query Tuning"
+      ]
+    },
+    {
+      "category": "Testing & Tools",
+      "items": [
+        "JUnit",
+        "Jest",
+        "TDD",
+        "Postman",
+        "Git",
+        "Claude Code",
+        "Graphify",
+        "Obsidian"
+      ]
+    },
+    {
+      "category": "Security",
+      "items": [
+        "OWASP Top 10",
+        "Penetration Test Remediation"
+      ]
+    },
+    {
+      "category": "Currently Learning",
+      "items": [
+        "Go",
+        "GCP",
+        "Docker",
+        "CI/CD"
+      ]
+    },
+    {
+      "category": "Spoken Languages",
+      "items": [
+        "Indonesian (Native)",
+        "English (Professional)"
+      ]
+    }
   ],
   "experience": [
     {
@@ -54,32 +162,60 @@
     }
   ],
   "education": [
-    { "school": "Universitas Indonesia — Faculty of Computer Science (Teaching Assistant)", "degree": "Bachelor of Computer Science (S.Kom)", "start": "2012", "end": "2018" }
+    {
+      "school": "Universitas Indonesia — Faculty of Computer Science (Teaching Assistant)",
+      "degree": "Bachelor of Computer Science (S.Kom)",
+      "start": "2012",
+      "end": "2018"
+    }
   ],
   "featuredProjects": [
     {
       "name": "ATM Bersama QRIS Certification Platform",
       "description": "UAT automation and certification platform with a sandbox host simulator: ISO 8583 TCP server, JWT + HMAC-secured REST API, JSON↔ISO 8583 conversion and auto-generated UAT reports. Main engineer; 766 JUnit tests.",
       "url": "",
-      "tags": ["Java 17", "Spring Boot", "jPOS", "ISO 8583", "QRIS", "PostgreSQL"]
+      "tags": [
+        "Java 17",
+        "Spring Boot",
+        "jPOS",
+        "ISO 8583",
+        "QRIS",
+        "PostgreSQL"
+      ]
     },
     {
       "name": "Oracle Fusion ERP Integration",
       "description": "ERP integration for a telecom client's project management system: ACK file processing, production PO data migration with rollback rehearsal, materialized-view query tuning. 400+ commits in 7 weeks, test-first.",
       "url": "",
-      "tags": ["Node.js", "Express.js", "Knex", "React", "PostgreSQL", "Jest"]
+      "tags": [
+        "Node.js",
+        "Express.js",
+        "Knex",
+        "React",
+        "PostgreSQL",
+        "Jest"
+      ]
     },
     {
       "name": "Bill-Hosting Portal",
       "description": "Portal for billers: bill upload and validation, payment monitoring, settlement and reconciliation reports, QR codes for payment URLs and broadcast notifications.",
       "url": "",
-      "tags": ["Spring Boot", "Spring Security", "Thymeleaf", "Oracle", "PostgreSQL"]
+      "tags": [
+        "Spring Boot",
+        "Spring Security",
+        "Thymeleaf",
+        "Oracle",
+        "PostgreSQL"
+      ]
     },
     {
       "name": "E-Money Back Office",
       "description": "Back office with maker-checker approvals, fraud and blacklist controls and account lockout.",
       "url": "",
-      "tags": ["Laravel", "PostgreSQL"]
+      "tags": [
+        "Laravel",
+        "PostgreSQL"
+      ]
     }
   ]
 }
