@@ -1,0 +1,13 @@
+# Render Blueprint: Dashboard -> New -> Blueprint -> pick this repository -> Apply.
+# Free plan sleeps after ~15 idle minutes (about a minute to wake up). For a portfolio that
+# recruiters open cold, consider switching this one service to the Starter instance type.
+services:
+  - type: web
+    name: helmi-fakhriandi
+    runtime: docker
+    plan: free
+    region: singapore
+    healthCheckPath: /actuator/health
+    envVars:
+      - key: GITHUB_USERNAME
+        value: 92hell
