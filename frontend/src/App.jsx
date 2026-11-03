@@ -28,7 +28,11 @@ function timeAgo(iso) {
   return `${Math.floor(days / 365)}y ago`
 }
 
-function Sidebar({ profile, hasCv }) {
+function Sidebar({ profile, hasCv, githubUrl }) {
+  const links = [...(profile.links ?? [])]
+  if (githubUrl && !links.some((l) => l.url.includes('github.com'))) {
+    links.unshift({ label: 'GitHub', url: githubUrl })
+  }
   return (
     <aside className="sidebar card">
       {profile.avatarUrl
@@ -41,7 +45,7 @@ function Sidebar({ profile, hasCv }) {
         <a className="btn primary" href="/api/cv" target="_blank" rel="noreferrer">Download CV</a>
       )}
       <nav className="links">
-        {profile.links?.map((l) => (
+        {links.map((l) => (
           <a key={l.url} href={l.url} target="_blank" rel="noreferrer">{l.label}</a>
         ))}
       </nav>
@@ -86,13 +90,18 @@ function Projects({ profile, repos }) {
         <section>
           <h2 className="section-title">Featured</h2>
           <div className="grid">
-            {profile.featuredProjects.map((p) => (
-              <a className="card project" key={p.name} href={p.url} target="_blank" rel="noreferrer">
-                <h3>{p.name}</h3>
-                <p className="muted">{p.description}</p>
-                <div className="tags">{p.tags?.map((t) => <span className="tag" key={t}>{t}</span>)}</div>
-              </a>
-            ))}
+            {profile.featuredProjects.map((p) => {
+              const body = (
+                <>
+                  <h3>{p.name}</h3>
+                  <p className="muted">{p.description}</p>
+                  <div className="tags">{p.tags?.map((t) => <span className="tag" key={t}>{t}</span>)}</div>
+                </>
+              )
+              return p.url
+                ? <a className="card project" key={p.name} href={p.url} target="_blank" rel="noreferrer">{body}</a>
+                : <div className="card project static" key={p.name}>{body}</div>
+            })}
           </div>
         </section>
       )}
@@ -175,7 +184,7 @@ export default function App() {
   const p = profile.data
   return (
     <div className="layout">
-      <Sidebar profile={p} hasCv={repos.data?.hasCv} />
+      <Sidebar profile={p} hasCv={repos.data?.hasCv} githubUrl={repos.data?.profileUrl} />
       <main>
         <div className="tabs" role="tablist">
           {TABS.map((t) => (

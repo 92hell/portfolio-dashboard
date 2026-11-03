@@ -40,7 +40,10 @@ class PortfolioControllerTest {
     }
 
     @Test
-    void cvIs404WhenMissing() throws Exception {
-        mvc.perform(get("/api/cv")).andExpect(status().isNotFound());
+    void servesCvPdf() throws Exception {
+        mvc.perform(get("/api/cv"))
+                .andExpect(status().isOk())
+                .andExpect(org.springframework.test.web.servlet.result.MockMvcResultMatchers
+                        .content().contentType("application/pdf"));
     }
 }

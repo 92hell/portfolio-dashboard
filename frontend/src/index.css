@@ -82,7 +82,7 @@ main { display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
 .small-link { font-size: .85rem; color: var(--accent); font-weight: 500; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
 .project { display: flex; flex-direction: column; gap: .5rem; transition: border-color .15s, transform .15s; }
-.project:hover { border-color: var(--accent); transform: translateY(-2px); }
+a.project:hover { border-color: var(--accent); transform: translateY(-2px); }
 .project p { flex: 1; font-size: .9rem; }
 .meta { display: flex; gap: .9rem; font-size: .8rem; color: var(--muted); }
 

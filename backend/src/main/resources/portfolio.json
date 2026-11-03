@@ -1,122 +1,85 @@
 {
-  "name": "Your Name",
-  "title": "Software Engineer · Java & React",
+  "name": "Helmi Fakhriandi Rachman",
+  "title": "Software Engineer · Payments & Backend",
   "location": "Jakarta, Indonesia",
-  "summary": "Backend-leaning full-stack engineer who enjoys building reliable APIs with Spring Boot and clean, fast interfaces with React. Replace this text in backend/src/main/resources/portfolio.json.",
-  "avatarUrl": "",
+  "summary": "Software Engineer with 6+ years of backend experience in payments. Since 2020 I have been a vendor developer for Artajasa, operator of the ATM Bersama network in Indonesia, building ISO 8583 and QRIS systems in Java and Spring Boot. I designed and built a QRIS certification platform as the main engineer, and now build Oracle Fusion ERP integration in Node.js for a telecom client. Strong in TDD, SQL tuning and AI-assisted development.",
+  "avatarUrl": "/avatar.jpg",
   "links": [
-    {
-      "label": "GitHub",
-      "url": "https://github.com/your-username"
-    },
-    {
-      "label": "LinkedIn",
-      "url": "https://www.linkedin.com/in/your-profile"
-    },
-    {
-      "label": "Email",
-      "url": "mailto:you@example.com"
-    }
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/helmi-fakhriandi-rachman" },
+    { "label": "Email", "url": "mailto:helmi.fakhriandi@gmail.com" }
   ],
   "highlights": [
-    {
-      "label": "Years experience",
-      "value": "4+"
-    },
-    {
-      "label": "Projects shipped",
-      "value": "15"
-    },
-    {
-      "label": "Primary stack",
-      "value": "Spring · React"
-    },
-    {
-      "label": "Open to",
-      "value": "Remote / Hybrid"
-    }
+    { "label": "Years in payments backend", "value": "6+" },
+    { "label": "JUnit tests on the QRIS platform", "value": "766" },
+    { "label": "Commits in 7 weeks (ERP integration)", "value": "400+" },
+    { "label": "Report load time (was 15–30 min)", "value": "< 5 min" }
   ],
   "skills": [
-    {
-      "category": "Backend",
-      "items": [
-        "Java 21",
-        "Spring Boot",
-        "Spring Data JPA",
-        "REST",
-        "PostgreSQL"
-      ]
-    },
-    {
-      "category": "Frontend",
-      "items": [
-        "React",
-        "TypeScript",
-        "Vite",
-        "CSS"
-      ]
-    },
-    {
-      "category": "DevOps",
-      "items": [
-        "Docker",
-        "GitHub Actions",
-        "Linux",
-        "Nginx"
-      ]
-    },
-    {
-      "category": "Practices",
-      "items": [
-        "Testing",
-        "Code review",
-        "Agile",
-        "Clean architecture"
-      ]
-    }
+    { "category": "Payments", "items": ["ISO 8583", "QRIS", "Payment Switching", "Payment Gateway", "TCP/IP Socket", "jPOS", "Host Simulator", "UAT & Certification Testing"] },
+    { "category": "Languages", "items": ["Java 17", "JavaScript", "SQL", "PHP"] },
+    { "category": "Frameworks", "items": ["Spring Boot", "Spring Security", "Spring Data JPA", "Thymeleaf", "Node.js", "Express.js", "Knex.js", "React", "Ant Design", "Yii 1.1", "Laravel"] },
+    { "category": "APIs & Integration", "items": ["Microservices", "RESTful API", "JWT", "HMAC Signing", "SOAP", "Oracle Fusion ERP Integration"] },
+    { "category": "Databases", "items": ["PostgreSQL", "MySQL", "Oracle", "Redis (basic)", "SQL Query Tuning"] },
+    { "category": "Testing & Tools", "items": ["JUnit", "Jest", "TDD", "Postman", "Git", "Claude Code", "Graphify", "Obsidian"] },
+    { "category": "Security", "items": ["OWASP Top 10", "Penetration Test Remediation"] },
+    { "category": "Currently Learning", "items": ["Go", "GCP", "Docker", "CI/CD"] },
+    { "category": "Spoken Languages", "items": ["Indonesian (Native)", "English (Professional)"] }
   ],
   "experience": [
     {
-      "company": "Company A",
+      "company": "Pusat Ilmu Komputer Universitas Indonesia (Pusilkom UI) — vendor developer for Artajasa (ATM Bersama Network)",
       "role": "Software Engineer",
-      "start": "2023",
+      "start": "Mar 2020",
       "end": "Present",
-      "location": "Remote",
+      "location": "Jakarta, Indonesia",
       "bullets": [
-        "Built and maintained Spring Boot microservices serving N requests/day.",
-        "Led migration of a legacy frontend to React, cutting load time by X%."
+        "As the main engineer, designed and built a UAT automation and certification platform for ATM Bersama QRIS in Java 17, Spring Boot, Thymeleaf, JPA, PostgreSQL and jPOS (311 of 371 commits; about 39,000 lines). Its sandbox host simulator runs an ISO 8583 TCP server and a JWT and HMAC-secured REST API, converts JSON to ISO 8583, and is covered by 766 JUnit tests. The tool replaces manual tests and writes the UAT report automatically.",
+        "Handed the platform to two developers in Aug 2026 and now mentor them and review their code.",
+        "Since Aug 2026, building Oracle Fusion ERP integration for a telecom client's project management system in Node.js, Express.js, Knex, PostgreSQL and React. Delivered over 400 commits in 7 weeks, including ERP ACK file processing, a production PO data migration with rollback rehearsal, and query tuning with materialized views, all test-first with Claude Code (380 new Jest test files).",
+        "2025 – 2026: main developer (192 of 322 commits) of a bill-hosting portal for billers in Spring Boot, Thymeleaf, Spring Security, Oracle and PostgreSQL. Built bill upload and validation, payment monitoring, settlement and reconciliation reports, QR code images for payment URLs and broadcast notifications.",
+        "2022 – 2025: main developer of an e-money back office in Laravel and PostgreSQL, with maker-checker approvals, fraud and blacklist controls and account lockout. Also built settlement and reconciliation features for a disbursement system in Yii 1.1, Oracle and MySQL, with JasperReports and a Java reconciliation scheduler.",
+        "2020 – 2025: built ISO 8583 switching and payment gateway proxy features in Java over TCP sockets in a microservice setup (separate back-end, worker, front-end, proxy, payment and disbursement APIs). Also built a dashboard for transactions worth billions of rupiah.",
+        "Debugged and tuned slow reports to cut report and page load times from 15–30 minutes to under 5 minutes on up to one million rows of daily data. Fixed 10 to 50 penetration test findings per project, including all high and critical issues."
       ]
     },
     {
-      "company": "Company B",
-      "role": "Junior Developer",
-      "start": "2021",
-      "end": "2023",
-      "location": "Jakarta",
+      "company": "Jojonomic",
+      "role": "Back-end Engineer Intern",
+      "start": "Jul 2017",
+      "end": "Oct 2017",
+      "location": "Jakarta, Indonesia",
       "bullets": [
-        "Developed internal dashboards and REST APIs.",
-        "Set up CI pipelines for automated testing and deployment."
+        "Maintained core APIs and integrated third-party APIs, including SOAP services, as part of the integration team."
       ]
     }
   ],
   "education": [
-    {
-      "school": "Your University",
-      "degree": "B.Sc. Computer Science",
-      "start": "2017",
-      "end": "2021"
-    }
+    { "school": "Universitas Indonesia — Faculty of Computer Science (Teaching Assistant)", "degree": "Bachelor of Computer Science (S.Kom)", "start": "2012", "end": "2018" }
   ],
   "featuredProjects": [
     {
-      "name": "Portfolio Dashboard",
-      "description": "This site — Spring Boot API + React frontend, pulling live repos from GitHub.",
-      "url": "https://github.com/your-username/portfolio-dashboard",
-      "tags": [
-        "Spring Boot",
-        "React",
-        "GitHub API"
-      ]
+      "name": "ATM Bersama QRIS Certification Platform",
+      "description": "UAT automation and certification platform with a sandbox host simulator: ISO 8583 TCP server, JWT + HMAC-secured REST API, JSON↔ISO 8583 conversion and auto-generated UAT reports. Main engineer; 766 JUnit tests.",
+      "url": "",
+      "tags": ["Java 17", "Spring Boot", "jPOS", "ISO 8583", "QRIS", "PostgreSQL"]
+    },
+    {
+      "name": "Oracle Fusion ERP Integration",
+      "description": "ERP integration for a telecom client's project management system: ACK file processing, production PO data migration with rollback rehearsal, materialized-view query tuning. 400+ commits in 7 weeks, test-first.",
+      "url": "",
+      "tags": ["Node.js", "Express.js", "Knex", "React", "PostgreSQL", "Jest"]
+    },
+    {
+      "name": "Bill-Hosting Portal",
+      "description": "Portal for billers: bill upload and validation, payment monitoring, settlement and reconciliation reports, QR codes for payment URLs and broadcast notifications.",
+      "url": "",
+      "tags": ["Spring Boot", "Spring Security", "Thymeleaf", "Oracle", "PostgreSQL"]
+    },
+    {
+      "name": "E-Money Back Office",
+      "description": "Back office with maker-checker approvals, fraud and blacklist controls and account lockout.",
+      "url": "",
+      "tags": ["Laravel", "PostgreSQL"]
     }
   ]
 }
