@@ -71,6 +71,28 @@ function Overview({ profile }) {
           ))}
         </div>
       </section>
+      {profile.wins?.length > 0 && (
+        <section>
+          <h2 className="section-title">Recent wins</h2>
+          <div className="wins">
+            {profile.wins.map((w) => (
+              <article className="card win" key={w.title}>
+                <h3>{w.title}</h3>
+                <p className="win-result">
+                  {w.before && (
+                    <>
+                      <span className="win-before">{w.before}</span>
+                      <span className="win-arrow" aria-label="became">→</span>
+                    </>
+                  )}
+                  <span className="win-after">{w.after}</span>
+                </p>
+                <p className="muted">{w.detail}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+      )}
       <section className="card">
         <h2>What I work with</h2>
         <div className="skills">

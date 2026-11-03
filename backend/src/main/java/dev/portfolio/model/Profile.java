@@ -11,6 +11,7 @@ public record Profile(
         String avatarUrl,
         List<Link> links,
         List<Highlight> highlights,
+        List<Win> wins,
         List<SkillGroup> skills,
         List<Experience> experience,
         List<Education> education,
@@ -20,6 +21,12 @@ public record Profile(
 
     /** A short, qualitative "what I do" card: an emoji, a title and one sentence. */
     public record Highlight(String icon, String title, String text) {}
+
+    /**
+     * A verified result told as a story. {@code before} is optional (e.g. for a delivery, not a speed-up).
+     * Only put numbers here that you have measured.
+     */
+    public record Win(String title, String before, String after, String detail) {}
 
     public record SkillGroup(String category, List<String> items) {}
 

@@ -75,6 +75,14 @@ main { display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
 .focus { display: flex; flex-direction: column; gap: .35rem; }
 .focus h3 { margin: 0; font-size: 1rem; }
 .focus p { margin: 0; font-size: .92rem; }
+.wins { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.win { display: flex; flex-direction: column; gap: .5rem; }
+.win h3 { margin: 0; font-size: 1rem; }
+.win p { margin: 0; font-size: .92rem; }
+.win-result { display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem; }
+.win-before { color: var(--muted); text-decoration: line-through; text-decoration-color: rgba(194, 65, 12, .5); }
+.win-arrow { color: var(--accent); font-weight: 700; }
+.win-after { color: var(--accent); font-weight: 700; font-size: 1.05rem; }
 .focus-icon { font-size: 1.5rem; line-height: 1; margin-bottom: .25rem; }
 
 .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
@@ -99,7 +107,7 @@ a.project:hover { border-color: var(--accent); transform: translateY(-2px); }
 .edu + .edu { margin-top: .75rem; }
 
 @media (max-width: 800px) {
-  .focus-grid { grid-template-columns: 1fr; }
+  .focus-grid, .wins { grid-template-columns: 1fr; }
   .layout { grid-template-columns: 1fr; padding: 1rem; }
   .sidebar { position: static; }
   .tabs { width: 100%; }
