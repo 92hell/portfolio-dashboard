@@ -30,7 +30,11 @@ class PortfolioControllerTest {
                 // Wins are verified results told as a story: optional "before", an "after", and context.
                 .andExpect(jsonPath("$.wins[0].title").isNotEmpty())
                 .andExpect(jsonPath("$.wins[0].after").isNotEmpty())
-                .andExpect(jsonPath("$.wins[0].detail").isNotEmpty());
+                .andExpect(jsonPath("$.wins[0].detail").isNotEmpty())
+                // The library app is featured first, with its live demo and its public code.
+                .andExpect(jsonPath("$.featuredProjects[0].name").value("Library Management System"))
+                .andExpect(jsonPath("$.featuredProjects[0].demoUrl").value("https://helmi-library-demo.onrender.com"))
+                .andExpect(jsonPath("$.featuredProjects[0].url").value("https://github.com/92hell/library-management-dashboard"));
     }
 
     @Test

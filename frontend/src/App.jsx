@@ -123,6 +123,18 @@ function Projects({ profile, repos }) {
                   <div className="tags">{p.tags?.map((t) => <span className="tag" key={t}>{t}</span>)}</div>
                 </>
               )
+              if (p.demoUrl) {
+                // Two destinations, so the card itself is not a link: a demo button and the code.
+                return (
+                  <div className="card project static" key={p.name}>
+                    {body}
+                    <div className="project-links">
+                      <a className="project-link primary" href={p.demoUrl} target="_blank" rel="noreferrer">Live demo ↗</a>
+                      {p.url && <a className="project-link" href={p.url} target="_blank" rel="noreferrer">Code</a>}
+                    </div>
+                  </div>
+                )
+              }
               return p.url
                 ? <a className="card project" key={p.name} href={p.url} target="_blank" rel="noreferrer">{body}</a>
                 : <div className="card project static" key={p.name}>{body}</div>
