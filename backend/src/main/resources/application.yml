@@ -1,7 +1,8 @@
 server:
   port: ${PORT:8080}
-  # Behind a hosting proxy (Render, Railway...), trust X-Forwarded-Proto so HTTPS is detected (HSTS).
-  forward-headers-strategy: framework
+  # Behind a hosting proxy (Render, Railway...): Tomcat trusts X-Forwarded-Proto / -For only from
+  # private (internal) proxy addresses, so HTTPS is detected (HSTS) and clients cannot spoof it.
+  forward-headers-strategy: native
 
 spring:
   application:
