@@ -28,7 +28,7 @@
     {
       "icon": "🧪",
       "title": "Test-first",
-      "text": "I write the test before the code, with JUnit and Jest."
+      "text": "About 3,000 automated tests across two projects, written before the code with JUnit and Jest."
     },
     {
       "icon": "🤝",
@@ -52,8 +52,8 @@
     {
       "title": "The query eating half the database",
       "before": "49% of DB time, queries up to the 1-hour timeout",
-      "after": "≤ 3.5 s per search",
-      "detail": "Added a vendor index and capped the query behind a picker screen; results identical in 182 of 182 checks (measured on staging)."
+      "after": "≤ 3.5 s per search, in staging tests",
+      "detail": "Added a vendor index and capped the query behind a picker screen; results identical in 182 of 182 checks."
     },
     {
       "title": "Shipping steadily, test-first",
@@ -167,13 +167,12 @@
       "end": "Present",
       "location": "Jakarta, Indonesia",
       "bullets": [
-        "As the main engineer, designed and built a UAT automation and certification platform for ATM Bersama QRIS in Java 17, Spring Boot, Thymeleaf, JPA, PostgreSQL and jPOS (311 of 371 commits; about 39,000 lines). Its sandbox host simulator runs an ISO 8583 TCP server and a JWT and HMAC-secured REST API, converts JSON to ISO 8583, and is covered by 766 JUnit tests. The tool replaces manual tests and writes the UAT report automatically.",
+        "As the main engineer, designed and built a UAT automation and certification platform for ATM Bersama QRIS in Java 17, Spring Boot, Thymeleaf, JPA, PostgreSQL and jPOS (311 of 371 commits; about 39,000 lines in the codebase). Its sandbox host simulator runs an ISO 8583 TCP server and a JWT and HMAC-secured REST API, converts JSON to ISO 8583, and is covered by 766 JUnit tests. The tool replaces manual tests and writes the UAT report automatically.",
         "Handed the platform to two developers in Aug 2026 and now mentor them and review their code.",
-        "Since Aug 2026, building the Oracle Fusion ERP integration for a telecom client's project management system in Node.js, Express.js, Knex, PostgreSQL and React: 669 commits to production in 11 weeks across 98 tickets, all test-first with Claude Code (530 test files, about 2,650 test cases).",
-        "Ran the go-live data load: a parallel load runner that loaded about 27,000 Oracle Fusion files (about 2 million rows) for 12,981 purchase orders in 4 days, with backups and rollback scripts for every step.",
-        "Fixed the slowest paths: a purchase-order Excel export from 16.5 min (timing out) to 15.5 s, and a search that took 49% of database time down to 3.5 s or less; also cut 10 of the project's 65 releases.",
-        "2025 – 2026: main developer (192 of 322 commits) of a bill-hosting portal for billers in Spring Boot, Thymeleaf, Spring Security, Oracle and PostgreSQL. Built bill upload and validation, payment monitoring, settlement and reconciliation reports, QR code images for payment URLs and broadcast notifications.",
-        "2022 – 2025: main developer of an e-money back office in Laravel and PostgreSQL, with maker-checker approvals, fraud and blacklist controls and account lockout. Also built settlement and reconciliation features for a disbursement system in Yii 1.1, Oracle and MySQL, with JasperReports and a Java reconciliation scheduler.",
+        "Since Aug 2026, building Oracle Fusion ERP integration for a telecom client's project management system in Node.js, Express.js, Knex, PostgreSQL and React. Shipped 669 commits to production in 11 weeks (455 back end, 214 front end), all test-first with Claude Code: 530 test files with about 2,650 test cases.",
+        "Ran the go-live data migration: built a parallel load runner and loaded about 27,000 ERP files (about 2 million rows for 12,981 purchase orders) in 4 days, with a backup and tested rollback for every step. Made a 20,580-row Excel export 60x faster (16.5 minutes to 15.5 seconds, memory 1.6 GB to 630 MB) and fixed the query behind 49% of production database time (up to 1 hour down to under 4 seconds in staging tests).",
+        "2025 – 2026: main developer (192 of 322 commits) of a bill-hosting portal for billers in Spring Boot, Thymeleaf, Spring Security, Oracle and PostgreSQL. Built bill upload and validation, payment monitoring, settlement and reconciliation reports, QR code images for payment URLs and broadcast notifications. Fixed about 80 security code review findings (CSP, CSRF, OWASP output encoding, session expiry, Tomcat upgrade).",
+        "2022 – 2025: main developer (72 of 102 commits) of an e-money back office in Laravel and PostgreSQL, with maker-checker approvals, fraud and blacklist controls and account lockout. Also built settlement and reconciliation features for a disbursement system in Yii 1.1, Oracle and MySQL, with JasperReports and a Java reconciliation scheduler.",
         "2020 – 2025: built ISO 8583 switching and payment gateway proxy features in Java over TCP sockets in a microservice setup (separate back-end, worker, front-end, proxy, payment and disbursement APIs). Also built a dashboard for transactions worth billions of rupiah.",
         "Debugged and tuned slow reports to cut report and page load times from 15–30 minutes to under 5 minutes on up to one million rows of daily data. Fixed 10 to 50 penetration test findings per project, including all high and critical issues."
       ]
@@ -226,7 +225,7 @@
     },
     {
       "name": "Bill-Hosting Portal",
-      "description": "Portal for billers: bill upload and validation, payment monitoring, settlement and reconciliation reports, QR codes for payment URLs and broadcast notifications.",
+      "description": "Portal for billers: bill upload and validation, payment monitoring, settlement and reconciliation reports, QR codes for payment URLs and broadcast notifications. Fixed about 80 security code review findings.",
       "url": "",
       "tags": [
         "Spring Boot",
