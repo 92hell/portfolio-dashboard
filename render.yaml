@@ -8,6 +8,12 @@ services:
     plan: free
     region: singapore
     healthCheckPath: /actuator/health
+    # Save build minutes: changes that cannot affect the running site do not trigger a deploy.
+    buildFilter:
+      ignoredPaths:
+        - "**/*.md"
+        - .github/**
+        - backend/src/test/**
     envVars:
       - key: GITHUB_USERNAME
         value: 92hell

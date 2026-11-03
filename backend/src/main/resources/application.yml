@@ -3,6 +3,9 @@ server:
   # Behind a hosting proxy (Render, Railway...): Tomcat trusts X-Forwarded-Proto / -For only from
   # private (internal) proxy addresses, so HTTPS is detected (HSTS) and clients cannot spoof it.
   forward-headers-strategy: native
+  # gzip text responses (HTML, JS, CSS, JSON) - hosting plans meter outbound bandwidth.
+  compression:
+    enabled: true
 
 spring:
   application:
