@@ -1,5 +1,7 @@
 server:
   port: ${PORT:8080}
+  # Behind a hosting proxy (Render, Railway...), trust X-Forwarded-Proto so HTTPS is detected (HSTS).
+  forward-headers-strategy: framework
 
 spring:
   application:
