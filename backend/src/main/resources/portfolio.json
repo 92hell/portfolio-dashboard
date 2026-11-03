@@ -1,29 +1,163 @@
 {
   "name": "Helmi Fakhriandi Rachman",
-  "title": "Software Engineer · Payments & Backend",
+  "title": "Backend engineer · payments & integrations",
   "location": "Jakarta, Indonesia",
-  "summary": "Software Engineer with 6+ years of backend experience in payments. Since 2020 I have been a vendor developer for Artajasa, operator of the ATM Bersama network in Indonesia, building ISO 8583 and QRIS systems in Java and Spring Boot. I designed and built a QRIS certification platform as the main engineer, and now build Oracle Fusion ERP integration in Node.js for a telecom client. Strong in TDD, SQL tuning and AI-assisted development.",
+  "summary": "Hi, I'm Helmi 👋 I've spent the last six years building payment systems for Indonesia's ATM Bersama network: ISO 8583 switching, QRIS, and the tooling that helps banks get certified. These days I'm also connecting a telecom client's project system to Oracle Fusion ERP. I like writing the test first, making slow reports fast, and handing over code the next person enjoys working on.",
   "avatarUrl": "/avatar.jpg",
   "links": [
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/helmi-fakhriandi-rachman" },
-    { "label": "Email", "url": "mailto:helmi.fakhriandi@gmail.com" }
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/helmi-fakhriandi-rachman"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:helmi.fakhriandi@gmail.com"
+    }
   ],
   "highlights": [
-    { "label": "Years in payments backend", "value": "6+" },
-    { "label": "JUnit tests on the QRIS platform", "value": "766" },
-    { "label": "Commits in 7 weeks (ERP integration)", "value": "400+" },
-    { "label": "Report load time (was 15–30 min)", "value": "< 5 min" }
+    {
+      "icon": "💳",
+      "title": "Payments, end to end",
+      "text": "ISO 8583 switching, QRIS and payment gateways for the ATM Bersama network since 2020."
+    },
+    {
+      "icon": "🔗",
+      "title": "Integrations",
+      "text": "Connecting a telecom client's project management system to Oracle Fusion ERP, from API work to go-live data loads."
+    },
+    {
+      "icon": "🧪",
+      "title": "Test-first",
+      "text": "I write the test before the code, with JUnit and Jest."
+    },
+    {
+      "icon": "🤝",
+      "title": "Mentoring",
+      "text": "Handed my QRIS platform to two developers and now review their code."
+    }
+  ],
+  "wins": [
+    {
+      "title": "Excel export that used to time out",
+      "before": "16.5 min, cut off at the 15-min gateway limit",
+      "after": "15.5 s",
+      "detail": "Purchase-order export of 20,580 rows, about 60× faster. Peak memory at 58k rows went from 1,591 MB (the server was restarting the app at 1.5 GB) to 630 MB."
+    },
+    {
+      "title": "Go-live data load into Oracle Fusion ERP",
+      "before": null,
+      "after": "~27,000 files, ~2 million rows in 4 days",
+      "detail": "Built a parallel load runner (up to 8 lanes) for 12,981 purchase orders: 99.8% of files fully loaded, a backup and rollback script for every step, and one bad run rolled back safely."
+    },
+    {
+      "title": "The query eating half the database",
+      "before": "49% of DB time, queries up to the 1-hour timeout",
+      "after": "≤ 3.5 s per search",
+      "detail": "Added a vendor index and capped the query behind a picker screen; results identical in 182 of 182 checks (measured on staging)."
+    },
+    {
+      "title": "Shipping steadily, test-first",
+      "before": null,
+      "after": "669 commits to production in 11 weeks",
+      "detail": "Across 98 tickets, with 530 test files (about 2,650 test cases) written before the code: about 1 in 5 test files in the codebase."
+    }
   ],
   "skills": [
-    { "category": "Payments", "items": ["ISO 8583", "QRIS", "Payment Switching", "Payment Gateway", "TCP/IP Socket", "jPOS", "Host Simulator", "UAT & Certification Testing"] },
-    { "category": "Languages", "items": ["Java 17", "JavaScript", "SQL", "PHP"] },
-    { "category": "Frameworks", "items": ["Spring Boot", "Spring Security", "Spring Data JPA", "Thymeleaf", "Node.js", "Express.js", "Knex.js", "React", "Ant Design", "Yii 1.1", "Laravel"] },
-    { "category": "APIs & Integration", "items": ["Microservices", "RESTful API", "JWT", "HMAC Signing", "SOAP", "Oracle Fusion ERP Integration"] },
-    { "category": "Databases", "items": ["PostgreSQL", "MySQL", "Oracle", "Redis (basic)", "SQL Query Tuning"] },
-    { "category": "Testing & Tools", "items": ["JUnit", "Jest", "TDD", "Postman", "Git", "Claude Code", "Graphify", "Obsidian"] },
-    { "category": "Security", "items": ["OWASP Top 10", "Penetration Test Remediation"] },
-    { "category": "Currently Learning", "items": ["Go", "GCP", "Docker", "CI/CD"] },
-    { "category": "Spoken Languages", "items": ["Indonesian (Native)", "English (Professional)"] }
+    {
+      "category": "Payments",
+      "items": [
+        "ISO 8583",
+        "QRIS",
+        "Payment Switching",
+        "Payment Gateway",
+        "TCP/IP Socket",
+        "jPOS",
+        "Host Simulator",
+        "UAT & Certification Testing"
+      ]
+    },
+    {
+      "category": "Languages",
+      "items": [
+        "Java 17",
+        "JavaScript",
+        "SQL",
+        "PHP"
+      ]
+    },
+    {
+      "category": "Frameworks",
+      "items": [
+        "Spring Boot",
+        "Spring Security",
+        "Spring Data JPA",
+        "Thymeleaf",
+        "Node.js",
+        "Express.js",
+        "Knex.js",
+        "React",
+        "Ant Design",
+        "Yii 1.1",
+        "Laravel"
+      ]
+    },
+    {
+      "category": "APIs & Integration",
+      "items": [
+        "Microservices",
+        "RESTful API",
+        "JWT",
+        "HMAC Signing",
+        "SOAP",
+        "Oracle Fusion ERP Integration"
+      ]
+    },
+    {
+      "category": "Databases",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "Oracle",
+        "Redis (basic)",
+        "SQL Query Tuning"
+      ]
+    },
+    {
+      "category": "Testing & Tools",
+      "items": [
+        "JUnit",
+        "Jest",
+        "TDD",
+        "Postman",
+        "Git",
+        "Claude Code",
+        "Graphify",
+        "Obsidian"
+      ]
+    },
+    {
+      "category": "Security",
+      "items": [
+        "OWASP Top 10",
+        "Penetration Test Remediation"
+      ]
+    },
+    {
+      "category": "Currently Learning",
+      "items": [
+        "Go",
+        "GCP",
+        "Docker",
+        "CI/CD"
+      ]
+    },
+    {
+      "category": "Spoken Languages",
+      "items": [
+        "Indonesian (Native)",
+        "English (Professional)"
+      ]
+    }
   ],
   "experience": [
     {
@@ -35,7 +169,9 @@
       "bullets": [
         "As the main engineer, designed and built a UAT automation and certification platform for ATM Bersama QRIS in Java 17, Spring Boot, Thymeleaf, JPA, PostgreSQL and jPOS (311 of 371 commits; about 39,000 lines). Its sandbox host simulator runs an ISO 8583 TCP server and a JWT and HMAC-secured REST API, converts JSON to ISO 8583, and is covered by 766 JUnit tests. The tool replaces manual tests and writes the UAT report automatically.",
         "Handed the platform to two developers in Aug 2026 and now mentor them and review their code.",
-        "Since Aug 2026, building Oracle Fusion ERP integration for a telecom client's project management system in Node.js, Express.js, Knex, PostgreSQL and React. Delivered over 400 commits in 7 weeks, including ERP ACK file processing, a production PO data migration with rollback rehearsal, and query tuning with materialized views, all test-first with Claude Code (380 new Jest test files).",
+        "Since Aug 2026, building the Oracle Fusion ERP integration for a telecom client's project management system in Node.js, Express.js, Knex, PostgreSQL and React: 669 commits to production in 11 weeks across 98 tickets, all test-first with Claude Code (530 test files, about 2,650 test cases).",
+        "Ran the go-live data load: a parallel load runner that loaded about 27,000 Oracle Fusion files (about 2 million rows) for 12,981 purchase orders in 4 days, with backups and rollback scripts for every step.",
+        "Fixed the slowest paths: a purchase-order Excel export from 16.5 min (timing out) to 15.5 s, and a search that took 49% of database time down to 3.5 s or less; also cut 10 of the project's 65 releases.",
         "2025 – 2026: main developer (192 of 322 commits) of a bill-hosting portal for billers in Spring Boot, Thymeleaf, Spring Security, Oracle and PostgreSQL. Built bill upload and validation, payment monitoring, settlement and reconciliation reports, QR code images for payment URLs and broadcast notifications.",
         "2022 – 2025: main developer of an e-money back office in Laravel and PostgreSQL, with maker-checker approvals, fraud and blacklist controls and account lockout. Also built settlement and reconciliation features for a disbursement system in Yii 1.1, Oracle and MySQL, with JasperReports and a Java reconciliation scheduler.",
         "2020 – 2025: built ISO 8583 switching and payment gateway proxy features in Java over TCP sockets in a microservice setup (separate back-end, worker, front-end, proxy, payment and disbursement APIs). Also built a dashboard for transactions worth billions of rupiah.",
@@ -54,32 +190,60 @@
     }
   ],
   "education": [
-    { "school": "Universitas Indonesia — Faculty of Computer Science (Teaching Assistant)", "degree": "Bachelor of Computer Science (S.Kom)", "start": "2012", "end": "2018" }
+    {
+      "school": "Universitas Indonesia — Faculty of Computer Science (Teaching Assistant)",
+      "degree": "Bachelor of Computer Science (S.Kom)",
+      "start": "2012",
+      "end": "2018"
+    }
   ],
   "featuredProjects": [
     {
       "name": "ATM Bersama QRIS Certification Platform",
       "description": "UAT automation and certification platform with a sandbox host simulator: ISO 8583 TCP server, JWT + HMAC-secured REST API, JSON↔ISO 8583 conversion and auto-generated UAT reports. Main engineer; 766 JUnit tests.",
       "url": "",
-      "tags": ["Java 17", "Spring Boot", "jPOS", "ISO 8583", "QRIS", "PostgreSQL"]
+      "tags": [
+        "Java 17",
+        "Spring Boot",
+        "jPOS",
+        "ISO 8583",
+        "QRIS",
+        "PostgreSQL"
+      ]
     },
     {
       "name": "Oracle Fusion ERP Integration",
-      "description": "ERP integration for a telecom client's project management system: ACK file processing, production PO data migration with rollback rehearsal, materialized-view query tuning. 400+ commits in 7 weeks, test-first.",
+      "description": "ERP integration for a telecom client: Oracle Fusion ACK file processing, a parallel go-live load (~2 million rows in 4 days), and performance fixes such as an Excel export from 16.5 min to 15.5 s. 669 commits in 11 weeks, test-first.",
       "url": "",
-      "tags": ["Node.js", "Express.js", "Knex", "React", "PostgreSQL", "Jest"]
+      "tags": [
+        "Node.js",
+        "Express.js",
+        "Knex",
+        "React",
+        "PostgreSQL",
+        "Jest"
+      ]
     },
     {
       "name": "Bill-Hosting Portal",
       "description": "Portal for billers: bill upload and validation, payment monitoring, settlement and reconciliation reports, QR codes for payment URLs and broadcast notifications.",
       "url": "",
-      "tags": ["Spring Boot", "Spring Security", "Thymeleaf", "Oracle", "PostgreSQL"]
+      "tags": [
+        "Spring Boot",
+        "Spring Security",
+        "Thymeleaf",
+        "Oracle",
+        "PostgreSQL"
+      ]
     },
     {
       "name": "E-Money Back Office",
       "description": "Back office with maker-checker approvals, fraud and blacklist controls and account lockout.",
       "url": "",
-      "tags": ["Laravel", "PostgreSQL"]
+      "tags": [
+        "Laravel",
+        "PostgreSQL"
+      ]
     }
   ]
 }
