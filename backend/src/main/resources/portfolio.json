@@ -1,0 +1,122 @@
+{
+  "name": "Your Name",
+  "title": "Software Engineer · Java & React",
+  "location": "Jakarta, Indonesia",
+  "summary": "Backend-leaning full-stack engineer who enjoys building reliable APIs with Spring Boot and clean, fast interfaces with React. Replace this text in backend/src/main/resources/portfolio.json.",
+  "avatarUrl": "",
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/your-username"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/your-profile"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:you@example.com"
+    }
+  ],
+  "highlights": [
+    {
+      "label": "Years experience",
+      "value": "4+"
+    },
+    {
+      "label": "Projects shipped",
+      "value": "15"
+    },
+    {
+      "label": "Primary stack",
+      "value": "Spring · React"
+    },
+    {
+      "label": "Open to",
+      "value": "Remote / Hybrid"
+    }
+  ],
+  "skills": [
+    {
+      "category": "Backend",
+      "items": [
+        "Java 21",
+        "Spring Boot",
+        "Spring Data JPA",
+        "REST",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "category": "Frontend",
+      "items": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "CSS"
+      ]
+    },
+    {
+      "category": "DevOps",
+      "items": [
+        "Docker",
+        "GitHub Actions",
+        "Linux",
+        "Nginx"
+      ]
+    },
+    {
+      "category": "Practices",
+      "items": [
+        "Testing",
+        "Code review",
+        "Agile",
+        "Clean architecture"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Company A",
+      "role": "Software Engineer",
+      "start": "2023",
+      "end": "Present",
+      "location": "Remote",
+      "bullets": [
+        "Built and maintained Spring Boot microservices serving N requests/day.",
+        "Led migration of a legacy frontend to React, cutting load time by X%."
+      ]
+    },
+    {
+      "company": "Company B",
+      "role": "Junior Developer",
+      "start": "2021",
+      "end": "2023",
+      "location": "Jakarta",
+      "bullets": [
+        "Developed internal dashboards and REST APIs.",
+        "Set up CI pipelines for automated testing and deployment."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "Your University",
+      "degree": "B.Sc. Computer Science",
+      "start": "2017",
+      "end": "2021"
+    }
+  ],
+  "featuredProjects": [
+    {
+      "name": "Portfolio Dashboard",
+      "description": "This site — Spring Boot API + React frontend, pulling live repos from GitHub.",
+      "url": "https://github.com/your-username/portfolio-dashboard",
+      "tags": [
+        "Spring Boot",
+        "React",
+        "GitHub API"
+      ]
+    }
+  ]
+}

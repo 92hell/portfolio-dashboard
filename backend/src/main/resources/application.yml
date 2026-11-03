@@ -1,0 +1,25 @@
+server:
+  port: ${PORT:8080}
+
+spring:
+  application:
+    name: portfolio-dashboard
+
+portfolio:
+  # Point this at file:./portfolio.json to edit your data without rebuilding.
+  profile-location: ${PORTFOLIO_PROFILE:classpath:portfolio.json}
+  # Drop a PDF at src/main/resources/cv.pdf (or set PORTFOLIO_CV=file:/path/to/cv.pdf) to enable "Download CV".
+  cv-location: ${PORTFOLIO_CV:classpath:cv.pdf}
+  github:
+    api-url: ${GITHUB_API_URL:https://api.github.com}
+    username: ${GITHUB_USERNAME:}
+    token: ${GITHUB_TOKEN:}
+    max-repos: ${GITHUB_MAX_REPOS:9}
+    include-forks: ${GITHUB_INCLUDE_FORKS:false}
+    cache-minutes: ${GITHUB_CACHE_MINUTES:30}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
