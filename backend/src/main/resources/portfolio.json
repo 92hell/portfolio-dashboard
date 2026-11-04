@@ -199,9 +199,9 @@
   "featuredProjects": [
     {
       "name": "Library Management System",
-      "description": "A library website: members request books online and librarians run the desk, with due-date notifications. Spring Boot 3 and React, session login with CSRF protection, an independent security review and 124 tests written test-first. The demo may take a minute to wake up.",
+      "description": "A library website: members find and request books online; librarians lend by barcode, run a holds queue, take late fees and print signed receipts anyone can verify. Spring Boot 3 and React, in English and Bahasa Indonesia, on desktop and phone. Written test-first: 272 backend tests on H2 and real MariaDB, 179 frontend tests and 16 browser journeys. The demo link wakes the free server first, which takes about a minute.",
       "url": "https://github.com/92hell/library-management-dashboard",
-      "demoUrl": "https://helmi-library-demo.onrender.com",
+      "demoUrl": "https://92hell.github.io/library-management-dashboard/",
       "tags": [
         "Spring Boot",
         "React",

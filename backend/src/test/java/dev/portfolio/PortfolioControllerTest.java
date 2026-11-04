@@ -31,9 +31,10 @@ class PortfolioControllerTest {
                 .andExpect(jsonPath("$.wins[0].title").isNotEmpty())
                 .andExpect(jsonPath("$.wins[0].after").isNotEmpty())
                 .andExpect(jsonPath("$.wins[0].detail").isNotEmpty())
-                // The library app is featured first, with its live demo and its public code.
+                // The library app is featured first, with its live demo (through the page that wakes the
+                // free server, so visitors never face a blank wait) and its public code.
                 .andExpect(jsonPath("$.featuredProjects[0].name").value("Library Management System"))
-                .andExpect(jsonPath("$.featuredProjects[0].demoUrl").value("https://helmi-library-demo.onrender.com"))
+                .andExpect(jsonPath("$.featuredProjects[0].demoUrl").value("https://92hell.github.io/library-management-dashboard/"))
                 .andExpect(jsonPath("$.featuredProjects[0].url").value("https://github.com/92hell/library-management-dashboard"));
     }
 
