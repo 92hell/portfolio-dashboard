@@ -211,6 +211,19 @@
       ]
     },
     {
+      "name": "Titip Laili Yuk: jastip app",
+      "description": "Orders, payments and trips for my wife's jastip (personal shopper) business: fees per item, per bundle, a percentage or NETT; down payments with transfer proof; a private invoice link sent over WhatsApp; shopping lists that work without signal; leftover stock sold at bazaars. Next.js 16, React 19 and TypeScript on PostgreSQL, installable on Android and iPhone, in Bahasa Indonesia and English. Written test-first: 37 unit tests, 62 integration tests on real PostgreSQL and 27 browser journeys with accessibility checks. The demo link wakes the free server first, which takes about a minute.",
+      "url": "https://github.com/92hell/jastip-pos",
+      "demoUrl": "https://92hell.github.io/jastip-pos/",
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "PostgreSQL",
+        "PWA",
+        "TDD"
+      ]
+    },
+    {
       "name": "ATM Bersama QRIS Certification Platform",
       "description": "UAT automation and certification platform with a sandbox host simulator: ISO 8583 TCP server, JWT + HMAC-secured REST API, JSON↔ISO 8583 conversion and auto-generated UAT reports. Main engineer; 766 JUnit tests.",
       "url": "",

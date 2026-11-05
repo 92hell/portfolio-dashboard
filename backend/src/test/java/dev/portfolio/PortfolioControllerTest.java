@@ -35,7 +35,11 @@ class PortfolioControllerTest {
                 // free server, so visitors never face a blank wait) and its public code.
                 .andExpect(jsonPath("$.featuredProjects[0].name").value("Library Management System"))
                 .andExpect(jsonPath("$.featuredProjects[0].demoUrl").value("https://92hell.github.io/library-management-dashboard/"))
-                .andExpect(jsonPath("$.featuredProjects[0].url").value("https://github.com/92hell/library-management-dashboard"));
+                .andExpect(jsonPath("$.featuredProjects[0].url").value("https://github.com/92hell/library-management-dashboard"))
+                // Then the jastip app, also with a live demo behind its wake-up page.
+                .andExpect(jsonPath("$.featuredProjects[1].name").value("Titip Laili Yuk: jastip app"))
+                .andExpect(jsonPath("$.featuredProjects[1].demoUrl").value("https://92hell.github.io/jastip-pos/"))
+                .andExpect(jsonPath("$.featuredProjects[1].url").value("https://github.com/92hell/jastip-pos"));
     }
 
     @Test
