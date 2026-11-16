@@ -1,5 +1,6 @@
 package dev.portfolio.config;
 
+import java.time.Duration;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
@@ -19,8 +20,12 @@ public record PortfolioProperties(String profileLocation, String cvLocation, Git
      * @param maxRepos        how many repos to show
      * @param includeForks    whether forked repos are listed
      * @param cacheMinutes    how long to cache GitHub responses
+     * @param retryAfter      after a failed fetch, how long to wait before asking GitHub again
+     * @param connectTimeout  how long to wait for a connection to GitHub
+     * @param readTimeout     how long to wait for GitHub's response
      */
-    public record Github(String apiUrl, String username, String token, int maxRepos, boolean includeForks, int cacheMinutes) {
+    public record Github(String apiUrl, String username, String token, int maxRepos, boolean includeForks, int cacheMinutes,
+                         Duration retryAfter, Duration connectTimeout, Duration readTimeout) {
         public boolean enabled() {
             return username != null && !username.isBlank();
         }

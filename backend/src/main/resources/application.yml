@@ -23,6 +23,12 @@ portfolio:
     max-repos: ${GITHUB_MAX_REPOS:9}
     include-forks: ${GITHUB_INCLUDE_FORKS:false}
     cache-minutes: ${GITHUB_CACHE_MINUTES:30}
+    # A failed fetch is not retried on every page view: the page answers at once (stale or empty)
+    # and GitHub is asked again only after this pause.
+    retry-after: ${GITHUB_RETRY_AFTER:1m}
+    # Never let a slow GitHub hold up the page (the Projects tab waits for /api/repos).
+    connect-timeout: ${GITHUB_CONNECT_TIMEOUT:3s}
+    read-timeout: ${GITHUB_READ_TIMEOUT:5s}
 
 management:
   endpoints:

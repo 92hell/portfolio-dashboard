@@ -47,6 +47,7 @@ class PortfolioControllerTest {
         mvc.perform(get("/api/repos"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.enabled").value(false))
+                .andExpect(jsonPath("$.unavailable").value(false))
                 .andExpect(jsonPath("$.repos").isEmpty());
     }
 
