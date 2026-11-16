@@ -1,5 +1,6 @@
 package dev.portfolio.controller;
 
+import com.fasterxml.jackson.annotation.JsonUnwrapped;
 import dev.portfolio.model.Profile;
 import dev.portfolio.service.GithubService;
 import dev.portfolio.service.ProfileService;
@@ -25,9 +26,15 @@ public class PortfolioController {
         this.githubService = githubService;
     }
 
+    /**
+     * The profile plus {@code hasCv}, so the "Download CV" button shows as soon as the profile loads
+     * instead of waiting for (or depending on) the GitHub call behind /api/repos.
+     */
+    public record ProfileResponse(@JsonUnwrapped Profile profile, boolean hasCv) {}
+
     @GetMapping("/profile")
-    public Profile profile() {
-        return profileService.getProfile();
+    public ProfileResponse profile() {
+        return new ProfileResponse(profileService.getProfile(), profileService.getCv() != null);
     }
 
     @GetMapping("/repos")
@@ -35,8 +42,7 @@ public class PortfolioController {
         return Map.of(
                 "enabled", githubService.enabled(),
                 "profileUrl", githubService.profileUrl(),
-                "repos", githubService.getRepos(),
-                "hasCv", profileService.getCv() != null);
+                "repos", githubService.getRepos());
     }
 
     @GetMapping("/cv")

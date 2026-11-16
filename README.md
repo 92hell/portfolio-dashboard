@@ -67,7 +67,7 @@ docker run -p 8080:8080 -e GITHUB_USERNAME=your-username portfolio-dashboard
 
 ## API
 
-- `GET /api/profile` — contents of `portfolio.json`
-- `GET /api/repos` — `{ enabled, profileUrl, hasCv, repos: [...] }`
+- `GET /api/profile` — contents of `portfolio.json`, plus `hasCv`
+- `GET /api/repos` — `{ enabled, profileUrl, repos: [...] }`
 - `GET /api/cv` — the CV PDF (404 if none)
 - `GET /actuator/health`

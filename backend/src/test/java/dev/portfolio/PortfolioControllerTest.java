@@ -22,6 +22,8 @@ class PortfolioControllerTest {
         mvc.perform(get("/api/profile"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name").isNotEmpty())
+                // Known with the profile, so the CV button never waits on GitHub.
+                .andExpect(jsonPath("$.hasCv").value(true))
                 .andExpect(jsonPath("$.skills").isArray())
                 // Highlights are short qualitative statements (title + sentence), not numeric claims.
                 .andExpect(jsonPath("$.highlights[0].title").isNotEmpty())
@@ -47,7 +49,8 @@ class PortfolioControllerTest {
         mvc.perform(get("/api/repos"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.enabled").value(false))
-                .andExpect(jsonPath("$.repos").isEmpty());
+                .andExpect(jsonPath("$.repos").isEmpty())
+                .andExpect(jsonPath("$.hasCv").doesNotExist());
     }
 
     @Test

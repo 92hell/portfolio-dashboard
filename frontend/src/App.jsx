@@ -221,7 +221,7 @@ export default function App() {
   const p = profile.data
   return (
     <div className="layout">
-      <Sidebar profile={p} hasCv={repos.data?.hasCv} githubUrl={repos.data?.profileUrl} />
+      <Sidebar profile={p} hasCv={p.hasCv} githubUrl={repos.data?.profileUrl} />
       <main>
         <div className="tabs" role="tablist">
           {TABS.map((t) => (
