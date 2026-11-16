@@ -109,6 +109,8 @@ function Overview({ profile }) {
 }
 
 function Projects({ profile, repos }) {
+  // Fall back to the GitHub link in the profile when the API itself could not be reached.
+  const githubUrl = repos.data?.profileUrl || profile.links?.find((l) => l.url.includes('github.com'))?.url
   return (
     <>
       {profile.featuredProjects?.length > 0 && (
@@ -150,11 +152,18 @@ function Projects({ profile, repos }) {
           )}
         </h2>
         {repos.loading && <p className="muted">Loading repositories…</p>}
-        {repos.error && <p className="muted">Couldn't load repositories.</p>}
+        {(repos.error || repos.data?.unavailable) && (
+          <p className="muted card">
+            Couldn't load repositories right now.{' '}
+            {githubUrl && <a className="small-link" href={githubUrl} target="_blank" rel="noreferrer">View them on GitHub →</a>}
+          </p>
+        )}
         {repos.data && !repos.data.enabled && (
           <p className="muted card">Set <code>GITHUB_USERNAME</code> on the backend to show your public repos here.</p>
         )}
-        {repos.data?.enabled && repos.data.repos.length === 0 && <p className="muted">No public repositories yet.</p>}
+        {repos.data?.enabled && !repos.data.unavailable && repos.data.repos.length === 0 && (
+          <p className="muted">No public repositories yet.</p>
+        )}
         <div className="grid">
           {repos.data?.repos.map((r) => (
             <a className="card project" key={r.id} href={r.url} target="_blank" rel="noreferrer">

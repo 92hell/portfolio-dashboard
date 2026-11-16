@@ -61,6 +61,8 @@ docker run -p 8080:8080 -e GITHUB_USERNAME=your-username portfolio-dashboard
 | `GITHUB_MAX_REPOS` | `9` | Number of repos shown |
 | `GITHUB_INCLUDE_FORKS` | `false` | Show forked repos too |
 | `GITHUB_CACHE_MINUTES` | `30` | How long GitHub results are cached |
+| `GITHUB_RETRY_AFTER` | `1m` | After a failed GitHub call, how long to wait before trying again (the last good list, if any, is served meanwhile) |
+| `GITHUB_CONNECT_TIMEOUT` / `GITHUB_READ_TIMEOUT` | `3s` / `5s` | Limits on how long a GitHub call may take |
 | `PORTFOLIO_PROFILE` | `classpath:portfolio.json` | Use `file:/path/portfolio.json` to edit without rebuilding |
 | `PORTFOLIO_CV` | `classpath:cv.pdf` | Location of your CV PDF |
 | `PORT` | `8080` | HTTP port |
@@ -68,6 +70,6 @@ docker run -p 8080:8080 -e GITHUB_USERNAME=your-username portfolio-dashboard
 ## API
 
 - `GET /api/profile` — contents of `portfolio.json`
-- `GET /api/repos` — `{ enabled, profileUrl, hasCv, repos: [...] }`
+- `GET /api/repos` — `{ enabled, unavailable, profileUrl, hasCv, repos: [...] }` (`unavailable`: GitHub could not be reached and there is no earlier list)
 - `GET /api/cv` — the CV PDF (404 if none)
 - `GET /actuator/health`

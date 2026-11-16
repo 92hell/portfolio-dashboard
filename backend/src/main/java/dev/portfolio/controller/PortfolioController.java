@@ -32,10 +32,12 @@ public class PortfolioController {
 
     @GetMapping("/repos")
     public Map<String, Object> repos() {
+        var repos = githubService.getRepos();
         return Map.of(
                 "enabled", githubService.enabled(),
+                "unavailable", githubService.unavailable(),
                 "profileUrl", githubService.profileUrl(),
-                "repos", githubService.getRepos(),
+                "repos", repos,
                 "hasCv", profileService.getCv() != null);
     }
 
