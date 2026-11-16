@@ -6,6 +6,8 @@
   --border: #ece6dd;
   --accent: #c2410c;
   --accent-soft: #fdeee4;
+  /* Text on a solid accent background (buttons). White on #c2410c is 5.2:1. */
+  --on-accent: #ffffff;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   color: var(--text);
   background: var(--bg);
@@ -21,6 +23,8 @@
     --border: #332d28;
     --accent: #fb923c;
     --accent-soft: #3a2518;
+    /* The dark-mode accent is light, so white on it is only 2.3:1; this near-black is 8.1:1. */
+    --on-accent: #171412;
   }
 }
 
@@ -63,7 +67,7 @@ main { display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
 .links a:hover { background: var(--accent-soft); }
 
 .btn { display: inline-block; margin-top: .75rem; padding: .55rem 1.1rem; border-radius: 8px; font-weight: 600; }
-.btn.primary { background: var(--accent); color: #fff; }
+.btn.primary { background: var(--accent); color: var(--on-accent); }
 .btn.primary:hover { filter: brightness(1.08); }
 
 .tabs { display: flex; gap: .25rem; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: .25rem; width: fit-content; }
@@ -99,7 +103,7 @@ a.project:hover { border-color: var(--accent); transform: translateY(-2px); }
 .project-links { display: flex; gap: .5rem; margin-top: .25rem; }
 .project-link { font-size: .85rem; font-weight: 600; padding: .3rem .8rem; border-radius: 8px;
   border: 1px solid var(--border); color: var(--accent); }
-.project-link.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.project-link.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 .project-link:hover { filter: brightness(1.08); }
 .meta { display: flex; gap: .9rem; font-size: .8rem; color: var(--muted); }
 
